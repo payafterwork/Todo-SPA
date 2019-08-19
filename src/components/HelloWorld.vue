@@ -15,21 +15,32 @@
 </template>
 
 <script>
+import db from '@/firebase/init'
 export default {
   name: 'HelloWorld',
   data(){
     return{
       tasks: [
-        { title: 'Ninja Brew', slug: 'ninja-brew', details: ['bananas', 'coffee', 'milk'], id: '1' },
-        { title: 'Morning Mood', slug: 'morning-mood', details: ['mango', 'lime', 'juice'], id: '2' }
-      ]
+        ]
     }
   },methods:{
     deleteTask(id){
-      this.tasks = this.tasks.filter(task=>{
+    
+      db.collection('tasks').doc(id).delete().then(()=>{
+          this.tasks = this.tasks.filter(task=>{
         return task.id!=id;
       })
+      })
     }
+  }, created(){
+    //fetch data from firestore
+    db.collection('tasks').get().then(snapshot=>{
+      snapshot.forEach(doc=>{
+         let task = doc.data();
+         task.id =  doc.id;
+         this.tasks.push(task)
+      })
+    })
   }
 }
 </script>
