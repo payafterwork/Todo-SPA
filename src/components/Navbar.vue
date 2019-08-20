@@ -3,7 +3,8 @@
     <nav class="nav-extended indigo darken-2">
       <div class="nav-content">
         <router-link :to="{name:'HelloWorld'}">
-          <span class="nav-title">Vue CRUD</span>
+    <title>TODO Tasks- Vue Based CRUD Web App with Firebase Backend</title>
+          <span class="nav-title">TODO Tasks- Vue Based CRUD Web App with Firebase Backend</span>
         </router-link>
         <a href="" class="btn-floating btn-large halfway-fab pink">
           <router-link :to="{name:'AddTask'}">
