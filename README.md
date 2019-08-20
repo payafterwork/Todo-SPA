@@ -1,4 +1,4 @@
-# TODO Tasks- Vue Based CRUD Web App
+# TODO Tasks: Vue SPA (Single-Page-Application) CRUD Web App with Firebase-Backend
 ![alt text](https://raw.githubusercontent.com/payafterwork/vuecrud/dependabot/npm_and_yarn/webpack-dev-server-3.1.11/readmeimg.PNG)
 
 > TODO Tasks- Vue Based CRUD Web App which is able to Create, Read, Update, and Delete tasks with Firebase as Backend.
